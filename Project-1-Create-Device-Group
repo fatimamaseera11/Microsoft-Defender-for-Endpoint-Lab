@@ -1,0 +1,55 @@
+# Project 1
+
+## Objective
+
+Create a device group inside Microsoft Defender for Endpoint.
+
+## Environment
+
+Microsoft Defender for Endpoint Trial
+
+## Steps
+
+1. Login to Microsoft Defender Portal
+
+2. Navigate to
+
+Settings
+
+↓
+
+Endpoints
+
+↓
+
+Permissions
+
+↓
+
+Device Groups
+
+3. Click Add Device Group
+
+4. Enter
+
+Name
+
+Description
+
+Automation Level
+
+5. Save
+
+## Result
+
+The device group was created successfully.
+
+## Skills Learned
+
+Device Management
+
+Automation
+
+RBAC
+
+Microsoft Defender Portal
