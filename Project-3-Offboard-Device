@@ -1,0 +1,148 @@
+# Project 3 - Offboard a Device from Microsoft Defender for Endpoint
+
+## Project Overview
+
+This project demonstrates how to safely offboard a Windows device from Microsoft Defender for Endpoint. Offboarding removes the endpoint from active monitoring and stops it from sending security telemetry to the Defender portal.
+
+---
+
+## Objective
+
+- Learn how to offboard a device
+- Understand the offboarding process
+- Verify successful offboarding
+- Understand device retention after offboarding
+
+---
+
+## Environment
+
+| Item | Details |
+|------|---------|
+| Platform | Microsoft Defender for Endpoint |
+| Operating System | Windows 11 |
+| Browser | Microsoft Edge |
+| License | Microsoft Defender for Endpoint Trial |
+
+---
+
+## Prerequisites
+
+- Microsoft Defender for Endpoint Trial
+- Administrator privileges
+- Device already onboarded
+- Internet connection
+
+---
+
+## Procedure
+
+### Step 1
+
+Login to Microsoft Defender Portal.
+
+```
+https://security.microsoft.com
+```
+
+---
+
+### Step 2
+
+Navigate to
+
+Settings
+
+↓
+
+Endpoints
+
+↓
+
+Device Management
+
+↓
+
+Offboarding
+
+---
+
+### Step 3
+
+Select
+
+Windows 11
+
+---
+
+### Step 4
+
+Download the Offboarding Package.
+
+---
+
+### Step 5
+
+Run the script as Administrator.
+
+---
+
+### Step 6
+
+Wait for the script to complete successfully.
+
+---
+
+### Step 7
+
+Open
+
+Assets
+
+↓
+
+Devices
+
+Verify the device status.
+
+---
+
+## Verification
+
+The device no longer sends telemetry.
+
+The **Last Seen** timestamp stops updating.
+
+The device remains visible for a retention period before being removed automatically.
+
+---
+
+## Challenges Faced
+
+### Issue
+
+The script displayed:
+
+```
+Please run with administrator privileges.
+```
+
+### Resolution
+
+Opened PowerShell as Administrator and executed the script again.
+
+---
+
+## Result
+
+Successfully offboarded the Windows 11 device from Microsoft Defender for Endpoint.
+
+---
+
+## Skills Learned
+
+- Device Offboarding
+- PowerShell
+- Administrator Privileges
+- Endpoint Management
+- Microsoft Defender Portal
