@@ -1,0 +1,45 @@
+# Device Onboarding
+
+## Objective
+
+Onboard a Windows device into Microsoft Defender.
+
+## Tools
+
+Microsoft Defender
+
+Windows 11
+
+## Steps
+
+1. Download onboarding package
+
+2. Run as Administrator
+
+3. Verify device
+
+Assets
+
+↓
+
+Devices
+
+## Result
+
+Device successfully onboarded.
+
+## Challenges
+
+Administrator privilege required.
+
+## Resolution
+
+Ran PowerShell as Administrator.
+
+## Skills
+
+Device onboarding
+
+Windows
+
+Troubleshooting
