@@ -1,0 +1,113 @@
+# Project 4 - Enable Full Automated Remediation
+
+## Project Overview
+
+This project demonstrates how to configure Full Automated Remediation for critical assets using Microsoft Defender for Endpoint.
+
+---
+
+## Objective
+
+Configure Microsoft Defender to automatically investigate and remediate security threats without manual analyst intervention.
+
+---
+
+## Environment
+
+| Item | Details |
+|------|---------|
+| Platform | Microsoft Defender for Endpoint |
+| Operating System | Windows 11 |
+| License | Microsoft Defender Trial |
+
+---
+
+## Prerequisites
+
+- Global Administrator
+- Device Group already created
+- Onboarded devices
+
+---
+
+## Procedure
+
+### Step 1
+
+Login to Microsoft Defender Portal.
+
+---
+
+### Step 2
+
+Navigate to
+
+Settings
+
+↓
+
+Endpoints
+
+↓
+
+Permissions
+
+↓
+
+Device Groups
+
+---
+
+### Step 3
+
+Select the Device Group.
+
+---
+
+### Step 4
+
+Edit Device Group.
+
+---
+
+### Step 5
+
+Configure Automation Level.
+
+Select:
+
+```
+Full
+```
+
+---
+
+### Step 6
+
+Save the configuration.
+
+---
+
+## Verification
+
+Confirmed that the Device Group now uses Full Automated Investigation and Remediation.
+
+---
+
+## Benefits
+
+- Faster response
+- Reduced manual work
+- Automatic malware removal
+- Automatic process termination
+- Automatic file quarantine
+
+---
+
+## Skills Learned
+
+- Automated Investigation
+- Automated Remediation
+- Device Groups
+- Microsoft Defender
+- Endpoint Security
