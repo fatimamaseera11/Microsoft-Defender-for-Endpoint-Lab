@@ -1,0 +1,129 @@
+# Project 5 - Assign RBAC Roles in Microsoft Defender for Endpoint
+
+## Project Overview
+
+This project demonstrates how to assign Role-Based Access Control (RBAC) roles to users within Microsoft Defender for Endpoint.
+
+RBAC ensures that users receive only the permissions required for their job responsibilities.
+
+---
+
+## Objective
+
+- Learn RBAC
+- Assign security roles
+- Control user permissions
+- Improve security administration
+
+---
+
+## Environment
+
+| Item | Details |
+|------|---------|
+| Platform | Microsoft Defender for Endpoint |
+| Operating System | Windows 11 |
+| License | Microsoft Defender Trial |
+
+---
+
+## Prerequisites
+
+- Global Administrator role
+- Microsoft Defender Portal
+- Microsoft Entra ID users
+
+---
+
+## Procedure
+
+### Step 1
+
+Login to Microsoft Defender Portal.
+
+---
+
+### Step 2
+
+Navigate to
+
+Settings
+
+↓
+
+Endpoints
+
+↓
+
+Permissions
+
+↓
+
+Roles
+
+---
+
+### Step 3
+
+Click
+
+Add Role
+
+---
+
+### Step 4
+
+Configure
+
+- Role Name
+- Description
+
+---
+
+### Step 5
+
+Select Permissions.
+
+Example:
+
+- View Alerts
+- Manage Incidents
+- Live Response
+- Device Isolation
+
+---
+
+### Step 6
+
+Assign users to the role.
+
+---
+
+### Step 7
+
+Save the role.
+
+---
+
+## Verification
+
+Verified that assigned users received only the configured permissions.
+
+---
+
+## Benefits
+
+- Least Privilege Principle
+- Better Security
+- Easier Administration
+- Controlled Access
+
+---
+
+## Skills Learned
+
+- RBAC
+- Identity and Access Management
+- Microsoft Defender
+- Microsoft Entra ID
+- Security Administration
