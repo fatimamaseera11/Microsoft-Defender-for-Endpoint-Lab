@@ -1,0 +1,261 @@
+# Microsoft Defender for Endpoint – Live Response Investigation
+
+## Overview
+
+This project demonstrates how to use **Live Response** in Microsoft Defender for Endpoint to remotely investigate an endpoint without requiring Remote Desktop (RDP). Live Response provides a secure command-line interface that allows security analysts to collect forensic data, investigate running processes, review network connections, and perform response actions directly from the Microsoft Defender XDR portal.
+
+---
+
+## Objective
+
+- Learn how to start a Live Response session.
+- Investigate an endpoint using built-in commands.
+- Collect forensic evidence.
+- Analyze running processes and active network connections.
+- Understand how Live Response supports incident response.
+
+---
+
+## Lab Environment
+
+- Microsoft Defender for Endpoint P2 Trial
+- Microsoft Defender XDR Portal
+- Windows 11 Virtual Machine
+- Microsoft Defender Antivirus Enabled
+
+---
+
+## Prerequisites
+
+- Device successfully onboarded to Microsoft Defender for Endpoint.
+- Device status shows **Active**.
+- Live Response is enabled under **Settings → Endpoints → Advanced Features**.
+- User has the required permissions (Security Administrator or Security Operator).
+
+---
+
+## Steps Performed
+
+### Step 1 – Sign in to Microsoft Defender XDR
+
+Open:
+
+```
+https://security.microsoft.com
+```
+
+---
+
+### Step 2 – Navigate to Device Inventory
+
+Go to:
+
+```
+Assets
+    ↓
+Devices
+```
+
+Select the onboarded Windows device.
+
+---
+
+### Step 3 – Start a Live Response Session
+
+From the device page:
+
+```
+Device Actions
+    ↓
+Initiate Live Response Session
+```
+
+A secure terminal opens after a few seconds.
+
+---
+
+### Step 4 – Display Available Commands
+
+Run:
+
+```cmd
+help
+```
+
+This displays all supported Live Response commands.
+
+---
+
+### Step 5 – Check the Current Directory
+
+```cmd
+pwd
+```
+
+Displays the current working directory.
+
+---
+
+### Step 6 – List Files
+
+```cmd
+ls
+```
+
+Lists files and folders in the current directory.
+
+---
+
+### Step 7 – View Running Processes
+
+```cmd
+processes
+```
+
+Displays currently running processes including Process ID (PID) and process names.
+
+---
+
+### Step 8 – View Active Network Connections
+
+```cmd
+connections
+```
+
+Displays active TCP/UDP connections and the associated processes.
+
+---
+
+### Step 9 – Display Logged-on Users
+
+```cmd
+users
+```
+
+Shows users currently logged on to the endpoint.
+
+---
+
+### Step 10 – View Windows Services
+
+```cmd
+services
+```
+
+Lists Windows services running on the endpoint.
+
+---
+
+### Step 11 – Search for a File
+
+```cmd
+findfile *.exe
+```
+
+Searches for executable files on the endpoint.
+
+Example:
+
+```cmd
+findfile password.txt
+```
+
+---
+
+### Step 12 – View File Information
+
+```cmd
+fileinfo C:\Users\Test\Downloads\sample.exe
+```
+
+Displays:
+
+- File Name
+- SHA1
+- SHA256
+- MD5
+- File Size
+- Digital Signature
+
+---
+
+### Step 13 – Download a File
+
+```cmd
+getfile C:\Users\Test\Downloads\sample.txt
+```
+
+Downloads the selected file securely from the endpoint for further analysis.
+
+---
+
+### Step 14 – Run an Antivirus Scan
+
+```cmd
+run antivirus scan
+```
+
+Starts a Microsoft Defender Antivirus scan on the endpoint.
+
+---
+
+### Step 15 – End the Session
+
+```cmd
+exit
+```
+
+Terminates the Live Response session.
+
+---
+
+## Live Response Commands Used
+
+| Command | Description |
+|----------|-------------|
+| help | Display available commands |
+| pwd | Show current directory |
+| ls | List files and folders |
+| processes | Display running processes |
+| connections | Show active network connections |
+| users | Display logged-on users |
+| services | List Windows services |
+| findfile | Search for files |
+| fileinfo | Display file metadata and hashes |
+| getfile | Download a file from the endpoint |
+| run antivirus scan | Start Microsoft Defender Antivirus scan |
+| exit | End the Live Response session |
+
+---
+
+## Skills Demonstrated
+
+- Microsoft Defender for Endpoint
+- Live Response
+- Endpoint Investigation
+- Process Analysis
+- Network Connection Analysis
+- File Investigation
+- Remote Endpoint Response
+- Incident Response
+- Threat Hunting Fundamentals
+
+---
+
+## Outcome
+
+Successfully initiated a Live Response session in Microsoft Defender for Endpoint, investigated the endpoint using built-in commands, analyzed running processes and network connections, retrieved file information, and performed remote endpoint investigation without requiring direct access to the device.
+
+---
+
+## Screenshots
+
+- Microsoft Defender XDR Portal
+- Device Inventory
+- Live Response Session
+- Help Command Output
+- Running Processes
+- Network Connections
+- File Information
+- Antivirus Scan
+- Session Completion
