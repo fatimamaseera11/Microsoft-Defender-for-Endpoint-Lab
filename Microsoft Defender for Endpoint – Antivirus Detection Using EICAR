@@ -1,0 +1,137 @@
+# Microsoft Defender for Endpoint – Antivirus Detection Using EICAR
+
+## Overview
+
+This project demonstrates how to validate Microsoft Defender Antivirus using the **EICAR Anti-Malware Test File**. The EICAR file is a safe industry-standard test file used to verify antivirus detection without using real malware.
+
+---
+
+## Objective
+
+- Test Microsoft Defender Antivirus.
+- Generate a security alert.
+- Investigate the alert in Microsoft Defender XDR.
+- Review automated remediation.
+
+---
+
+## Lab Environment
+
+- Windows 11 Virtual Machine
+- Microsoft Defender for Endpoint P2
+- Microsoft Defender Antivirus
+
+---
+
+## Steps Performed
+
+### Step 1: Verify Device Onboarding
+
+Navigate to:
+
+```
+Assets
+    ↓
+Devices
+```
+
+Confirm the device is onboarded and active.
+
+---
+
+### Step 2: Download the EICAR Test File
+
+Download the test file from:
+
+```
+https://www.eicar.org/download-anti-malware-testfile/
+```
+
+---
+
+### Step 3: Observe Defender Detection
+
+Microsoft Defender Antivirus immediately detects the EICAR file.
+
+Possible actions include:
+
+- Blocked
+- Quarantined
+- Removed
+
+---
+
+### Step 4: Review the Alert
+
+Navigate to:
+
+```
+Incidents & Alerts
+    ↓
+Alerts
+```
+
+Locate the malware detection alert.
+
+---
+
+### Step 5: Investigate the Alert
+
+Review:
+
+- Alert Severity
+- Detection Time
+- Device Name
+- File Name
+- SHA1 Hash
+- Recommended Actions
+
+---
+
+### Step 6: Review the Device Timeline
+
+Navigate to:
+
+```
+Assets
+    ↓
+Devices
+    ↓
+<Device Name>
+    ↓
+Timeline
+```
+
+Observe:
+
+- File Download
+- Malware Detection
+- Antivirus Action
+- Alert Creation
+
+---
+
+### Step 7: Verify Remediation
+
+Confirm the remediation action:
+
+- Quarantined
+- Removed
+- Blocked
+
+---
+
+## Skills Demonstrated
+
+- Microsoft Defender for Endpoint
+- Microsoft Defender Antivirus
+- Malware Detection
+- Alert Investigation
+- Device Timeline Analysis
+- Incident Response
+
+---
+
+## Outcome
+
+Successfully validated Microsoft Defender Antivirus using the EICAR test file, investigated the generated alert, reviewed the device timeline, and verified the remediation performed by Microsoft Defender.
