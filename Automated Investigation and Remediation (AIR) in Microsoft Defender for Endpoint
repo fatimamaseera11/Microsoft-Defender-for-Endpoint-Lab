@@ -1,0 +1,1168 @@
+Project-06-Automated-Investigation-and-Remediation
+Project Title
+Enable and Test Automated Investigation and Remediation (AIR) in Microsoft Defender for Endpoint
+
+Project Objective
+The objective of this project is to enable Automated Investigation and Remediation (AIR) in Microsoft Defender for Endpoint and verify that alerts are automatically investigated and appropriate remediation actions are recommended or executed.
+
+This reduces manual work for SOC analysts and speeds up incident response.
+
+Prerequisites
+Microsoft Defender for Endpoint Plan 2
+
+Global Administrator or Security Administrator role
+
+Device onboarded to Microsoft Defender for Endpoint
+
+Test Windows device
+
+Internet connection
+
+Microsoft Defender Portal access
+
+Step 1 – Sign in to Microsoft Defender Portal
+Open your browser.
+
+Go to
+
+https://security.microsoft.com
+
+Login using your Administrator account.
+
+Step 2 – Open Settings
+From the left menu
+
+Settings
+
+↓
+
+Endpoints
+
+Step 3 – Open Advanced Features
+Click
+
+Advanced Features
+
+Scroll down until you find
+
+Automated Investigation
+
+Step 4 – Enable Automated Investigation
+Turn ON
+
+✅ Automated Investigation
+
+Click
+
+Save Preferences
+
+Wait a few minutes for the settings to apply.
+
+Step 5 – Configure Automation Level
+Navigate to
+
+Settings
+
+↓
+
+Endpoints
+
+↓
+
+Automation
+
+Choose the remediation level.
+
+Available options:
+
+Semi - Require approval
+Microsoft investigates automatically.
+
+SOC Analyst approves remediation.
+
+Recommended for production.
+
+Full - Automatically remediate
+Microsoft investigates automatically.
+
+Microsoft remediates threats automatically.
+
+Recommended for testing labs.
+
+Select
+
+Full Automation
+
+Click Save.
+
+Step 6 – Verify Device Automation Level
+Go to
+
+Assets
+
+↓
+
+Devices
+
+Open your onboarded device.
+
+Verify
+
+Automation Level
+
+shows
+
+Full
+
+Step 7 – Generate a Test Alert
+Create a harmless malware test.
+
+Use the EICAR file.
+
+Open Notepad.
+
+Paste:
+
+X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+Save as
+
+eicar.com
+Microsoft Defender Antivirus detects it immediately.
+
+Step 8 – Alert Creation
+Go to
+
+Incidents & Alerts
+
+↓
+
+Alerts
+
+A new alert appears.
+
+Example
+
+Malware detected
+
+Step 9 – Automated Investigation Starts
+Open the alert.
+
+You will see
+
+Investigation Status
+
+Running
+Microsoft Defender automatically starts investigating.
+
+No manual action required.
+
+Step 10 – View Investigation Graph
+Open
+
+Investigation
+
+You can see
+
+Suspicious file
+
+Parent process
+
+Child process
+
+Registry changes
+
+Network connections
+
+User account
+
+Device
+
+Everything is shown in a graphical investigation.
+
+Step 11 – Investigation Analysis
+Microsoft Defender checks
+
+Running processes
+
+Registry
+
+Startup items
+
+Scheduled tasks
+
+Services
+
+Persistence methods
+
+Network activity
+
+Browser activity
+
+Download history
+
+File reputation
+
+Step 12 – Recommended Actions
+After investigation Microsoft recommends actions like
+
+Remove file
+
+Quarantine file
+
+Terminate process
+
+Remove persistence
+
+Delete registry key
+
+Block hash
+
+Step 13 – Automatic Remediation
+Because Full Automation is enabled
+
+Microsoft Defender automatically
+
+✓ Quarantines malware
+
+✓ Stops malicious process
+
+✓ Removes persistence
+
+✓ Cleans affected files
+
+Step 14 – Investigation Completed
+Status changes
+
+Running
+
+↓
+
+Completed
+
+Investigation Result
+
+Remediated
+Step 15 – Verify Remediation
+Open
+
+Assets
+
+↓
+
+Devices
+
+↓
+
+Timeline
+
+You will see actions like
+
+Malware quarantined
+
+Threat removed
+
+Process terminated
+
+Investigation completed
+
+Step 16 – Review Investigation Details
+Open
+
+Incidents
+
+↓
+
+Investigation
+
+Review
+
+Timeline
+
+Root Cause
+
+Evidence
+
+Remediation actions
+
+Investigation ID
+
+Step 17 – Verify Device Health
+Open
+
+Device Inventory
+
+Device Health
+
+Ensure
+
+No active threats remain.
+
+Expected Result
+Automated Investigation enabled.
+
+Alert generated successfully.
+
+Investigation started automatically.
+
+Threat analyzed automatically.
+
+Malware quarantined.
+
+Investigation completed successfully.
+
+Device protected without manual intervention.
+
+SOC Analyst Learning Outcomes
+After completing this project, you will understand:
+
+How Automated Investigation works.
+
+Difference between Manual and Automated investigations.
+
+Investigation timeline.
+
+Evidence collection.
+
+Automated remediation process.
+
+Threat containment.
+
+Root cause analysis.
+
+Alert lifecycle.
+
+Device timeline analysis.
+
+Investigation graph interpretation.
+
+Architecture Flow
+Suspicious Activity
+        │
+        ▼
+Microsoft Defender Alert
+        │
+        ▼
+Automated Investigation Starts
+        │
+        ▼
+Collect Evidence
+        │
+        ▼
+Analyze Processes
+        │
+        ▼
+Analyze Files
+        │
+        ▼
+Analyze Registry
+        │
+        ▼
+Analyze Network
+        │
+        ▼
+Generate Investigation Report
+        │
+        ▼
+Recommended Actions
+        │
+        ▼
+Automatic Remediation
+        │
+        ▼
+Threat Removed
+        │
+        ▼
+Investigation Completed
+Skills Demonstrated
+Microsoft Defender for Endpoint
+
+Automated Investigation and Remediation (AIR)
+
+Malware Detection
+
+Incident Response
+
+Threat Hunting
+
+Evidence Collection
+
+Alert Investigation
+
+Device Timeline Analysis
+
+Security Operations (SOC)
+
+Endpoint Security
+
+Suggested GitHub Repository Structure
+Project-06-Automated-Investigation-and-Remediation/
+│
+├── README.md
+├── screenshots/
+│   ├── 01-Settings.png
+│   ├── 02-Automation-Level.png
+│   ├── 03-Test-Alert.png
+│   ├── 04-Investigation-Running.png
+│   ├── 05-Evidence-Graph.png
+│   ├── 06-Remediation-Actions.png
+│   ├── 07-Investigation-Completed.png
+│   └── 08-Device-Timeline.png
+└── docs/
+    └── Investigation-Report.md
+This project is suitable for a SOC analyst portfolio because it demonstrates hands-on experience with configuring, testing, and validating Automated Investigation and Remediation (AIR) in Microsoft Defender for Endpoint using a realistic malware simulation (EICAR) and documenting the investigation workflow from detection to remediation.
+
+
+send me automated investigation step by step project for git hub submission
+
+Project-06: Automated Investigation and Remediation (AIR) in Microsoft Defender for Endpoint
+Project Overview
+This project demonstrates how to configure and verify Automated Investigation and Remediation (AIR) in Microsoft Defender for Endpoint. AIR helps Security Operations Center (SOC) teams by automatically investigating alerts, collecting evidence, analyzing threats, and recommending or performing remediation actions based on the configured automation level.
+
+Project Objective
+Enable Automated Investigation and Remediation (AIR).
+
+Configure the automation level.
+
+Generate a test alert.
+
+Observe the automated investigation process.
+
+Review investigation details and remediation actions.
+
+Verify that the threat has been remediated successfully.
+
+Technologies Used
+Microsoft Defender for Endpoint
+
+Microsoft Defender XDR Portal
+
+Windows 10/11
+
+Microsoft Defender Antivirus
+
+EICAR Test File
+
+Microsoft Defender for Endpoint Plan 2
+
+Prerequisites
+Before starting this project, ensure you have:
+
+Microsoft Defender for Endpoint Plan 2
+
+Global Administrator or Security Administrator permissions
+
+A Windows device onboarded to Microsoft Defender for Endpoint
+
+Microsoft Defender Antivirus enabled
+
+Internet connectivity
+
+Step 1: Sign in to Microsoft Defender Portal
+Open your web browser.
+
+Navigate to https://security.microsoft.com.
+
+Sign in using an administrator account.
+
+Expected Result: The Microsoft Defender portal dashboard opens successfully.
+
+Step 2: Navigate to Endpoint Settings
+In the left navigation pane, select Settings.
+
+Click Endpoints.
+
+Select Advanced features.
+
+Expected Result: The Advanced Features page is displayed.
+
+Step 3: Enable Automated Investigation
+Scroll to Automated Investigation.
+
+Turn the feature On.
+
+Click Save Preferences.
+
+Expected Result: Automated Investigation is enabled.
+
+Step 4: Configure Automation Level
+Go to Settings → Endpoints → Automation.
+
+Select the appropriate automation level.
+
+Available options:
+
+Semi – Require approval
+
+Full – Automatically remediate
+
+For this lab, select Full Automation.
+
+Click Save.
+
+Expected Result: Devices are configured for automatic remediation.
+
+Step 5: Verify Device Automation Level
+Select Assets.
+
+Click Devices.
+
+Open the onboarded device.
+
+Verify that the Automation Level displays Full.
+
+Expected Result: Device is configured for Full Automation.
+
+Step 6: Generate a Test Alert
+Open Notepad.
+
+Paste the EICAR test string:
+
+X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+Save the file as:
+
+eicar.com
+Microsoft Defender Antivirus detects the file immediately.
+
+Expected Result: A malware detection alert is generated.
+
+Step 7: View the Security Alert
+Navigate to Incidents & Alerts.
+
+Select Alerts.
+
+Open the newly created malware alert.
+
+Expected Result: The alert details page opens.
+
+Step 8: Observe Automated Investigation
+After opening the alert, Microsoft Defender automatically starts the investigation.
+
+Check the following information:
+
+Investigation Status
+
+Investigation ID
+
+Alert Severity
+
+Detection Source
+
+Initially, the status should display:
+
+Running
+Expected Result: Automated Investigation begins without manual intervention.
+
+Step 9: Review Investigation Graph
+Open the Investigation tab.
+
+Microsoft Defender analyzes:
+
+Suspicious files
+
+Running processes
+
+Parent and child processes
+
+Registry changes
+
+Scheduled tasks
+
+Services
+
+Startup entries
+
+Network connections
+
+User accounts
+
+Device information
+
+Expected Result: Investigation graph displays all related evidence.
+
+Step 10: Evidence Collection
+Microsoft Defender automatically collects evidence including:
+
+File reputation
+
+Process execution
+
+Registry modifications
+
+Persistence mechanisms
+
+Network activity
+
+Threat intelligence
+
+Device timeline events
+
+Expected Result: Evidence is linked to the investigation.
+
+Step 11: Automated Analysis
+Microsoft Defender analyzes collected evidence and determines whether:
+
+The file is malicious
+
+The process is suspicious
+
+Registry persistence exists
+
+Additional remediation is required
+
+Expected Result: Defender completes threat analysis automatically.
+
+Step 12: Recommended Remediation Actions
+If malicious activity is confirmed, Microsoft Defender recommends actions such as:
+
+Quarantine file
+
+Remove malware
+
+Stop malicious process
+
+Delete malicious registry keys
+
+Remove persistence
+
+Block malicious file hash
+
+Expected Result: Remediation recommendations are generated.
+
+Step 13: Automatic Remediation
+Because Full Automation is enabled, Microsoft Defender automatically performs remediation.
+
+Possible actions include:
+
+Quarantining malicious files
+
+Terminating malicious processes
+
+Removing registry persistence
+
+Cleaning infected files
+
+Expected Result: Threat is automatically remediated.
+
+Step 14: Investigation Completion
+When remediation is complete:
+
+Investigation Status changes from:
+
+Running
+to
+
+Completed
+Investigation Result:
+
+Remediated
+Expected Result: Investigation completes successfully.
+
+Step 15: Verify Device Timeline
+Navigate to:
+
+Assets → Devices → Device Timeline
+
+Verify that the following events appear:
+
+Malware detected
+
+Automated investigation started
+
+File quarantined
+
+Process terminated
+
+Threat remediated
+
+Investigation completed
+
+Expected Result: Timeline confirms all remediation activities.
+
+Step 16: Review Investigation Report
+Open the completed investigation.
+
+Review:
+
+Investigation Summary
+
+Root Cause
+
+Evidence
+
+Timeline
+
+Alerts
+
+Remediation Actions
+
+Investigation ID
+
+Expected Result: Full investigation details are available.
+
+Project Validation Checklist
+Validation Item	Status
+Device onboarded	✅
+AIR enabled	✅
+Automation level configured	✅
+Test alert generated	✅
+Investigation started	✅
+Evidence collected	✅
+Threat analyzed	✅
+Remediation completed	✅
+Investigation completed	✅
+Project Outcome
+Successfully configured and tested Automated Investigation and Remediation (AIR) in Microsoft Defender for Endpoint. The platform automatically detected a simulated malware event, initiated an investigation, collected evidence, analyzed the threat, and performed remediation without requiring manual analyst intervention.
+
+Skills Demonstrated
+Microsoft Defender for Endpoint Administration
+
+Automated Investigation and Remediation (AIR)
+
+Endpoint Detection and Response (EDR)
+
+Malware Detection
+
+Incident Response
+
+Threat Analysis
+
+Evidence Collection
+
+Device Timeline Analysis
+
+Security Operations Center (SOC) Workflows
+
+Microsoft Defender XDR
+
+Suggested GitHub Repository Structure
+Project-06-Automated-Investigation-and-Remediation/
+│
+├── README.md
+├── docs/
+│   └── AIR-Configuration.md
+├── screenshots/
+│   ├── 01-Defender-Portal.png
+│   ├── 02-Advanced-Features.png
+│   ├── 03-Automation-Level.png
+│   ├── 04-Alert-Generated.png
+│   ├── 05-Investigation-Running.png
+│   ├── 06-Investigation-Graph.png
+│   ├── 07-Remediation-Actions.png
+│   ├── 08-Investigation-Completed.png
+│   └── 09-Device-Timeline.png
+└── LICENSE
+This format is suitable for a professional GitHub portfolio and demonstrates practical Microsoft Defender for Endpoint AIR implementation and validation in a SOC environment.
+
+
+yes send me properly so that i can copy and paste
+
+Below is a professional GitHub README.md that you can directly copy and paste into your repository.
+
+# Project 06 - Automated Investigation and Remediation (AIR) in Microsoft Defender for Endpoint
+
+## Project Overview
+
+Automated Investigation and Remediation (AIR) is a built-in capability in Microsoft Defender for Endpoint that helps Security Operations Center (SOC) teams automatically investigate alerts, collect evidence, determine the root cause of an incident, and perform remediation actions. This project demonstrates how to configure AIR, verify its functionality, and review the automated investigation results.
+
+---
+
+## Objective
+
+The objective of this project is to:
+
+- Enable Automated Investigation and Remediation (AIR)
+- Configure the device automation level
+- Generate a test malware alert
+- Observe the automated investigation process
+- Review investigation evidence and remediation actions
+- Verify that the threat is remediated successfully
+
+---
+
+## Environment
+
+| Component | Details |
+|-----------|---------|
+| Platform | Microsoft Defender for Endpoint |
+| Portal | Microsoft Defender XDR Portal |
+| Operating System | Windows 10/11 |
+| Antivirus | Microsoft Defender Antivirus |
+| License | Microsoft Defender for Endpoint Plan 2 |
+
+---
+
+## Prerequisites
+
+Before starting this project, ensure the following requirements are met:
+
+- Microsoft Defender for Endpoint Plan 2
+- Administrator account with Security Administrator or Global Administrator permissions
+- Windows device onboarded to Microsoft Defender for Endpoint
+- Microsoft Defender Antivirus enabled
+- Internet connection
+
+---
+
+# Step 1 - Sign in to Microsoft Defender Portal
+
+1. Open a web browser.
+2. Go to **https://security.microsoft.com**
+3. Sign in using an administrator account.
+
+**Expected Result**
+
+The Microsoft Defender XDR portal opens successfully.
+
+---
+
+# Step 2 - Navigate to Endpoint Settings
+
+1. Select **Settings** from the left navigation pane.
+2. Select **Endpoints**.
+3. Open **Advanced Features**.
+
+**Expected Result**
+
+The Advanced Features page is displayed.
+
+---
+
+# Step 3 - Enable Automated Investigation
+
+1. Scroll down to **Automated Investigation**.
+2. Turn the setting **On**.
+3. Click **Save Preferences**.
+
+**Expected Result**
+
+Automated Investigation is enabled successfully.
+
+---
+
+# Step 4 - Configure Automation Level
+
+1. Navigate to:
+
+Settings → Endpoints → Automation
+
+2. Choose one of the following options:
+
+- Semi - Require approval
+- Full - Automatically remediate
+
+3. Select **Full Automation**.
+
+4. Click **Save**.
+
+**Expected Result**
+
+Devices are configured for automatic remediation.
+
+---
+
+# Step 5 - Verify Device Automation Level
+
+1. Navigate to:
+
+Assets → Devices
+
+2. Open the onboarded Windows device.
+
+3. Verify that the Automation Level is displayed as:
+
+**Full**
+
+**Expected Result**
+
+The device is configured for Full Automation.
+
+---
+
+# Step 6 - Generate a Test Malware Alert
+
+1. Open Notepad.
+
+2. Paste the following EICAR test string.
+
+```text
+X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*
+```
+
+3. Save the file as:
+
+```
+eicar.com
+```
+
+Microsoft Defender Antivirus immediately detects and quarantines the file.
+
+**Expected Result**
+
+A malware detection alert is generated.
+
+---
+
+# Step 7 - Open the Alert
+
+Navigate to:
+
+Incidents & Alerts → Alerts
+
+Open the newly created malware alert.
+
+**Expected Result**
+
+The alert details page is displayed.
+
+---
+
+# Step 8 - Automated Investigation Starts
+
+After opening the alert, Microsoft Defender automatically starts the investigation.
+
+Verify the following information:
+
+- Investigation Status
+- Alert Severity
+- Detection Source
+- Investigation ID
+
+Initially, the investigation status should display:
+
+```
+Running
+```
+
+**Expected Result**
+
+Automated Investigation starts automatically.
+
+---
+
+# Step 9 - Review the Investigation Graph
+
+Open the **Investigation** tab.
+
+Microsoft Defender analyzes:
+
+- Suspicious files
+- Parent process
+- Child process
+- Registry modifications
+- Startup entries
+- Scheduled tasks
+- Windows services
+- Network connections
+- User accounts
+- Device information
+
+**Expected Result**
+
+The investigation graph displays all related evidence.
+
+---
+
+# Step 10 - Evidence Collection
+
+During the investigation Microsoft Defender collects:
+
+- File reputation
+- Process execution history
+- Registry modifications
+- Startup persistence
+- Scheduled tasks
+- Services
+- Network activity
+- Device timeline
+- Threat intelligence information
+
+**Expected Result**
+
+Evidence is automatically collected and linked to the investigation.
+
+---
+
+# Step 11 - Automated Threat Analysis
+
+Microsoft Defender automatically determines whether:
+
+- The file is malicious
+- A process is suspicious
+- Registry persistence exists
+- Additional remediation is required
+
+**Expected Result**
+
+Threat analysis is completed automatically.
+
+---
+
+# Step 12 - Review Recommended Actions
+
+Microsoft Defender recommends remediation actions such as:
+
+- Quarantine malicious file
+- Remove malware
+- Stop malicious process
+- Delete malicious registry entries
+- Remove persistence
+- Block malicious file hash
+
+**Expected Result**
+
+Recommended remediation actions are displayed.
+
+---
+
+# Step 13 - Automatic Remediation
+
+Since Full Automation is enabled, Microsoft Defender automatically performs remediation.
+
+Typical remediation actions include:
+
+- Quarantine malicious files
+- Terminate malicious processes
+- Remove registry persistence
+- Delete malicious scheduled tasks
+- Clean infected files
+
+**Expected Result**
+
+Threat is remediated automatically.
+
+---
+
+# Step 14 - Investigation Completed
+
+The investigation status changes from:
+
+```
+Running
+```
+
+to
+
+```
+Completed
+```
+
+Investigation Result:
+
+```
+Remediated
+```
+
+**Expected Result**
+
+The investigation is completed successfully.
+
+---
+
+# Step 15 - Verify Device Timeline
+
+Navigate to:
+
+Assets → Devices → Device Timeline
+
+Verify the following activities:
+
+- Malware detected
+- Investigation started
+- Evidence collected
+- File quarantined
+- Process terminated
+- Threat remediated
+- Investigation completed
+
+**Expected Result**
+
+The device timeline confirms successful remediation.
+
+---
+
+# Step 16 - Review Investigation Report
+
+Open the completed investigation.
+
+Review:
+
+- Investigation Summary
+- Investigation Timeline
+- Root Cause
+- Evidence
+- Alerts
+- Remediation Actions
+- Investigation ID
+
+**Expected Result**
+
+A complete investigation report is available.
+
+---
+
+# Validation Checklist
+
+| Task | Status |
+|------|--------|
+| Device Onboarded | ✅ |
+| AIR Enabled | ✅ |
+| Automation Configured | ✅ |
+| Test Alert Generated | ✅ |
+| Investigation Started | ✅ |
+| Evidence Collected | ✅ |
+| Threat Analyzed | ✅ |
+| Remediation Completed | ✅ |
+| Investigation Closed | ✅ |
+
+---
+
+# Project Outcome
+
+Successfully configured and validated Automated Investigation and Remediation (AIR) in Microsoft Defender for Endpoint. The platform automatically detected a simulated malware event, initiated an investigation, analyzed the collected evidence, performed remediation, and generated a complete investigation report without requiring manual intervention.
+
+---
+
+# Skills Demonstrated
+
+- Microsoft Defender for Endpoint
+- Microsoft Defender XDR
+- Automated Investigation and Remediation (AIR)
+- Endpoint Detection and Response (EDR)
+- Malware Detection
+- Incident Response
+- Threat Investigation
+- Device Timeline Analysis
+- Evidence Collection
+- Security Operations Center (SOC)
+
+---
+
+# Repository Structure
+
+```
+Project-06-Automated-Investigation-and-Remediation/
+│
+├── README.md
+├── docs/
+│   └── Investigation-Notes.md
+├── screenshots/
+│   ├── 01-Portal.png
+│   ├── 02-AIR-Enabled.png
+│   ├── 03-Automation-Level.png
+│   ├── 04-Alert.png
+│   ├── 05-Investigation-Running.png
+│   ├── 06-Investigation-Graph.png
+│   ├── 07-Remediation.png
+│   ├── 08-Investigation-Completed.png
+│   └── 09-Device-Timeline.png
+└── LICENSE
+```
+
+---
+
+## Conclusion
+
+This project demonstrates how Microsoft Defender for Endpoint uses Automated Investigation and Remediation (AIR) to reduce manual effort for SOC analysts by automatically detecting threats, investigating alerts, collecting evidence, determining the root cause, and performing remediation actions. AIR improves incident response speed, reduces analyst workload, and enhances endpoint security through automated threat handling.
+This README is written in a professional format suitable for GitHub and SOC portfolio submissions.
+
+
